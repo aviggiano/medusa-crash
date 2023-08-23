@@ -7,7 +7,9 @@
 		"callSequenceLength": 100,
 		"corpusDirectory": "",
 		"coverageEnabled": true,
-		"deploymentOrder": [],
+		"deploymentOrder": [
+			"EchidnaTester"
+		],
 		"constructorArgs": {},
 		"deployerAddress": "0x30000",
 		"senderAddresses": [
@@ -26,7 +28,7 @@
 			"testAllContracts": false,
 			"traceAll": false,
 			"assertionTesting": {
-				"enabled": false,
+				"enabled": true,
 				"testViewMethods": false,
 				"assertionModes": {
 					"failOnCompilerInsertedPanic": false,
@@ -65,10 +67,12 @@
 	"compilation": {
 		"platform": "crytic-compile",
 		"platformConfig": {
-			"target": ".",
+			"target": "Echidna.sol",
 			"solcVersion": "",
 			"exportDirectory": "",
-			"args": []
+			"args": [
+				"--solc-remaps", "@crytic/properties/=lib/properties/"
+			]
 		}
 	},
 	"logging": {
