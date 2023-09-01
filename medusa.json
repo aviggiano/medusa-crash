@@ -10,6 +10,9 @@
 		"deploymentOrder": [
 			"EchidnaTester"
 		],
+		"targetContracts": [
+			"EchidnaTester"
+		],
 		"constructorArgs": {},
 		"deployerAddress": "0x30000",
 		"senderAddresses": [
